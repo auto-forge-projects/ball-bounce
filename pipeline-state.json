@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 121,
+  "revision": 128,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 15,
+  "current_phase": 16,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -232,6 +232,19 @@
       ],
       "completed_at": "2026-07-31T02:44:21.592Z"
     },
+    "15": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:45:00.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/15-maintenance.md"
+      ],
+      "decisions": [
+        "DL-15-001"
+      ],
+      "completed_at": "2026-07-31T02:45:37.720Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -325,6 +338,15 @@
       "event": "phase_closed",
       "phase": 14,
       "detail": "Health check + hata gorunurlugu tanimlandi, DL-14-001"
+    },
+    {
+      "event": "phase_started",
+      "phase": 15
+    },
+    {
+      "event": "phase_closed",
+      "phase": 15,
+      "detail": "6 TD kalemi (0 P1/1 P2/5 P3), npm audit CVE TD-1 olarak kaydedildi, DL-15-001"
     }
   ],
   "budget": {
@@ -426,10 +448,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T02:44:21.592Z"
+      },
+      {
+        "phase": "15",
+        "duration_s": 38,
+        "model": null,
+        "model_recommended": "haiku",
+        "gate_passed": true,
+        "at": "2026-07-31T02:45:37.720Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:44:21.982Z",
+  "updated_at": "2026-07-31T02:45:37.947Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -516,6 +546,11 @@
       "phase": 14,
       "at": "2026-07-31T02:44:21.914Z",
       "note": "Izleme: /health + docker logs + dashboard Urun paneli. Alerting yok (LITE, DL-14-001) - uptime-check ihtiyaci Faz15 borcuna."
+    },
+    {
+      "phase": 15,
+      "at": "2026-07-31T02:45:37.874Z",
+      "note": "TD-1 (express transitive CVE, P2) en onemli borc - bir sonraki bakim turunda npm audit fix. Diger 5 kalem P3, dusuk risk."
     }
   ],
   "product": {
