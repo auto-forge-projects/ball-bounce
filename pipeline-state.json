@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 31,
+  "revision": 35,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 4,
+  "current_phase": 5,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -50,6 +50,21 @@
       "decisions": [
         "DL-04-001",
         "DL-04-002"
+      ]
+    },
+    "5": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T01:59:40.431Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-31T02:04:06.792Z",
+      "note": "Mimari tasarim tamamlandi (architect subagent) - physics.js/game.js/server.js modul yapisi",
+      "artifacts": [
+        "docs/05-architecture.md"
+      ],
+      "decisions": [
+        "DL-05-001",
+        "DL-05-002"
       ]
     },
     "1-2": {
@@ -128,10 +143,18 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-31T01:59:28.621Z"
+      },
+      {
+        "phase": "5",
+        "duration_s": 266,
+        "model": null,
+        "model_recommended": "opus",
+        "gate_passed": true,
+        "at": "2026-07-31T02:04:06.792Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T01:59:28.698Z",
+  "updated_at": "2026-07-31T02:04:06.865Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -168,6 +191,11 @@
       "phase": 3,
       "at": "2026-07-31T01:56:14.906Z",
       "note": "6 FR (vurus/skor/oyun-bitti/restart/hiz-artisi/kontrol) + 4 NFR (gecikme<=1sn x2, framework yok, skor kaliciligi yok). Faz 4/5 canvas tabanli client-side mimari ustune kurulacak."
+    },
+    {
+      "phase": 4,
+      "at": "2026-07-31T01:59:35.217Z",
+      "note": "Cozum: Vanilla Canvas 2D + rAF (client), Node/Express minimal statik sunucu + /health (server). NFR-3 A2yi eledi. Faz 5 bu ikisi ustune mimari kuracak."
     }
   ]
 }
