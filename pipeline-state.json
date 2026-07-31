@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 18,
+  "revision": 19,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -10,13 +10,18 @@
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
-      "status": "awaiting_approval",
-      "note": "0b yanıtlar uygulandı — brief onay bekliyor",
+      "status": "done",
+      "note": "Faz 0 (Fikir/Intake) üretildi (orchestrator inline, business-analyst rolü) — onaylı 0b brief girdi alındı",
       "artifacts": [
         "docs/00-refined-brief.md",
-        "docs/00-refine-questions.json"
+        "docs/00-refine-questions.json",
+        "docs/00-idea.md"
       ],
-      "decisions": []
+      "decisions": [
+        "DL-00-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-31T01:53:54.120Z"
     }
   },
   "feedback_loops": [],
@@ -57,7 +62,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-31T01:52:19.355Z",
+  "updated_at": "2026-07-31T01:53:54.217Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
