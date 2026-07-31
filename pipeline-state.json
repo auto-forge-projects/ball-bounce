@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 59,
+  "revision": 62,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -13,7 +13,7 @@
       "phase": 9,
       "task": "Development (TDD)",
       "started_at": "2026-07-31T02:11:37.335Z",
-      "last_update": "2026-07-31T02:12:38.331Z",
+      "last_update": "2026-07-31T02:13:26.451Z",
       "via": "inline"
     }
   ],
@@ -134,11 +134,11 @@
         },
         {
           "title": "TASK-003 server.js Express static+/health+security headers - test+impl",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "TASK-004 public/index.html + style.css yuzeyi",
-          "status": "pending"
+          "status": "in_progress"
         },
         {
           "title": "TASK-005 public/game.js rAF+render+HUD",
@@ -269,7 +269,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T02:13:24.295Z",
+  "updated_at": "2026-07-31T02:13:45.767Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
