@@ -1,16 +1,17 @@
 # 11 — Sonuç Raporu: ball-bounce
 
 - Tarih: 2026-07-31 | `npm test` (workspace kökünde, `node --test --experimental-test-coverage`)
+- **Revalidasyon (AF-091, REQ-001 delta sonrası):** Faz 9'a `boot()` bootstrap eklendi (`tests/game.boot.test.js`), toplam test 25→26. Aşağıdaki sayılar güncel koşuma aittir.
 
 ## Sonuç raporu
 
 | Metrik | Değer |
 |--------|-------|
-| Toplam test | 25 |
-| Geçti / Kaldı | 25 / 0 |
-| Coverage (line / branch / funcs) | 98.60% / 94.34% / 93.24% (tüm dosyalar) — `public/physics.js` %100/90/100, `public/game.js` %100/85.71/100, `src/server.js` %88.33/90/71.43 |
+| Toplam test | 26 |
+| Geçti / Kaldı | 26 / 0 |
+| Coverage (line / branch / funcs) | 98.37% / 93.04% / 93.75% (tüm dosyalar) — `public/physics.js` %100/90/100, `public/game.js` %97.67/77.78/100, `src/server.js` %88.33/90/71.43 |
 
-`node:test` özeti: `# pass 25`, `# fail 0`, `# cancelled 0`.
+`node:test` özeti: `# pass 26`, `# fail 0`, `# cancelled 0`.
 
 - `src/server.js`'in kapsanmayan satırları (48, 55-60) `NODE_ENV!==test` altındaki gerçek `listen()` başlatma bloğu — testte kasıtlı çalıştırılmaz (üretim giriş noktası, `createServer()` ayrı test edilir).
 

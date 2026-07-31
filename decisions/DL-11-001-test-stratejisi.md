@@ -10,3 +10,7 @@
 - Geri alınabilirlik: Yüksek (ihtiyaç doğarsa `tests/e2e/` eklemek mevcut testleri bozmaz, yalnız üstüne katman ekler).
 - İnsan onayı: Otomatik (AUTOPILOT, kapı geçti)
 - Varsayım mı?: Evet — AUTOPILOT varsayımı: mevcut entegrasyon testlerinin E2E'ye eşdeğer güvence sağladığı kabul edildi; kullanıcı gerçek tarayıcı doğrulaması isterse Faz 15 borcuna eklenir.
+
+## Revalidasyon (AF-091 — REQ-001 delta, cycle 2)
+- Tarih: 2026-07-31 | Tetikleyici: Faz 9'a `boot()` bootstrap eklendi (DL-09-002) — bu fazın çıktısı eski (bootstrap'sız) koda dayanıyordu.
+- Etki: `tests/game.boot.test.js` yeni kritik senaryo olarak `test-plan.md`'e eklendi (bootstrap→render), `results.md` güncel koşuma (26/26 pass, coverage 98.37/93.04/93.75) göre yenilendi. Strateji/karar DEĞİŞMEDİ — yalnız kapsam genişledi.
