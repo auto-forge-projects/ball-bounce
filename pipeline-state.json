@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 19,
+  "revision": 23,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 0,
+  "current_phase": "1-2",
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -22,6 +22,20 @@
       ],
       "gate_passed": true,
       "completed_at": "2026-07-31T01:53:54.120Z"
+    },
+    "1-2": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T01:54:19.496Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-31T01:54:53.548Z",
+      "note": "Değer & Fizibilite (LITE birleşik) — GO kararı",
+      "artifacts": [
+        "docs/01-02-value-feasibility.md"
+      ],
+      "decisions": [
+        "DL-01-001"
+      ]
     }
   },
   "feedback_loops": [],
@@ -60,9 +74,19 @@
   ],
   "budget": {
     "model_calls": {},
-    "notes": ""
+    "notes": "",
+    "telemetry": [
+      {
+        "phase": "1-2",
+        "duration_s": 34,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T01:54:53.548Z"
+      }
+    ]
   },
-  "updated_at": "2026-07-31T01:53:54.217Z",
+  "updated_at": "2026-07-31T01:54:53.616Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -83,5 +107,12 @@
       "fallback_reason": null
     },
     "at": "2026-07-31T01:50:25.523Z"
-  }
+  },
+  "checkpoints": [
+    {
+      "phase": 0,
+      "at": "2026-07-31T01:54:10.505Z",
+      "note": "Ball-bounce: keepy-uppy tek oyunculu web oyunu, LITE profil, client-side stateless, emoji top, hız zamanla artıyor, kontrol: fare+klavye+dokunma hepsi birden."
+    }
+  ]
 }
