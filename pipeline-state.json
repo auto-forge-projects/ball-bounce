@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 129,
+  "revision": 137,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
   "current_phase": 16,
-  "status": "pending",
+  "status": "completed",
   "active_agents": [],
   "phases": {
     "0": {
@@ -245,6 +245,19 @@
       ],
       "completed_at": "2026-07-31T02:45:37.720Z"
     },
+    "16": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:46:00.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/16-retro.md"
+      ],
+      "decisions": [
+        "DL-16-001"
+      ],
+      "completed_at": "2026-07-31T02:47:43.150Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -347,6 +360,24 @@
       "event": "phase_closed",
       "phase": 15,
       "detail": "6 TD kalemi (0 P1/1 P2/5 P3), npm audit CVE TD-1 olarak kaydedildi, DL-15-001"
+    },
+    {
+      "event": "phase_started",
+      "phase": 16
+    },
+    {
+      "at": "2026-07-31T02:47:43.150Z",
+      "event": "zombie_agents_pruned",
+      "detail": "1 bayat ajan kaydı budandı (fazı koşmuyor — AF-090)"
+    },
+    {
+      "event": "phase_closed",
+      "phase": 16,
+      "detail": "Retro: AF-127 (state-update.mjs coklu-bayrak sessiz yoksayma) kaydedildi, DL-16-001"
+    },
+    {
+      "event": "pipeline_completed",
+      "detail": "17 faz tamamlandi (LITE, Faz 10 AF-112 geregi atlandi). .pipeline-complete isareti eklendi, CI artik normal kosacak."
     }
   ],
   "budget": {
@@ -456,10 +487,18 @@
         "model_recommended": "haiku",
         "gate_passed": true,
         "at": "2026-07-31T02:45:37.720Z"
+      },
+      {
+        "phase": "16",
+        "duration_s": 103,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T02:47:43.150Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:45:40.577Z",
+  "updated_at": "2026-07-31T02:47:43.477Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -551,6 +590,11 @@
       "phase": 15,
       "at": "2026-07-31T02:45:37.874Z",
       "note": "TD-1 (express transitive CVE, P2) en onemli borc - bir sonraki bakim turunda npm audit fix. Diger 5 kalem P3, dusuk risk."
+    },
+    {
+      "phase": 16,
+      "at": "2026-07-31T02:47:43.410Z",
+      "note": "Pipeline tamamlandi. En onemli fabrika ogrenimi: AF-127 (state-update.mjs coklu mutasyon bayragi sessizce ilkine indirgeniyor). TD-1 (npm audit CVE) sonraki bakim turunda ele alinmali."
     }
   ],
   "product": {
