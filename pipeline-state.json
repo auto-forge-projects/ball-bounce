@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 151,
+  "revision": 153,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -198,7 +198,7 @@
       "decisions": [
         "DL-12-001"
       ],
-      "completed_at": "2026-07-31T02:40:08.119Z"
+      "completed_at": "2026-07-31T04:04:00.000Z"
     },
     "13": {
       "status": "done",
@@ -417,7 +417,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T04:00:54.366Z",
+  "updated_at": "2026-07-31T04:01:44.762Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [

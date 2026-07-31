@@ -1,7 +1,7 @@
 # Faz 12 — CI/CD
 
 ## Var olan (scaffold'dan, dokunulmadı)
-- `.github/workflows/ci.yml` — push/PR'da `npm test` koşar (25/25 test).
+- `.github/workflows/ci.yml` — push/PR'da `npm test` koşar (26/26 test — REQ-001 revalidasyonu, bkz. aşağı).
 - `.github/workflows/deploy-image.yml` — GHCR'a build+push, ardından SSH ile `deploy/remote-deploy.sh` çalıştırır (`deploy.json.enabled:true` gate'i — bu projede zaten `true`, `host_port:5007`).
 - `deploy.json` — `port:3000`, `healthcheck:/health` — bu faz için değiştirilmedi.
 
@@ -23,3 +23,7 @@
 - ✅ İmaj çalışıyor, `/health` 200 ve statik `index.html` servis ediliyor (container-içi doğrulandı).
 - ⚠️ Host-portu-publish edilmiş dış erişim bu ortamda test edilemedi (sandbox `-p` kısıtı, DL-12-001'de not edildi) — gerçek doğrulama SSH-deploy sonrası `deploy/remote-deploy.sh`'in kendi health-probe'uyla yapılır.
 - ✅ `state.product.commands.run` tanımlı (dashboard "Ürün" paneli).
+
+## Revalidasyon (AF-091 — REQ-001 delta, cycle 2)
+- Tarih: 2026-07-31 | Tetikleyici: Faz 9'a `boot()` bootstrap eklendi (DL-09-002), yalnız `public/game.js` + yeni test dosyası değişti.
+- Etki: YOK — `Dockerfile` `COPY public ./public` zaten tüm `public/` dizinini kopyalıyor (yeni kod dahil), `ci.yml` genel `npm test` çalıştırır (yeni test otomatik dahil). Dockerfile/CI/deploy.json değişikliği gerekmedi.
