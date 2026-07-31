@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-31T00:00:00.000Z",
+  "status": "applied",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Oyun mekaniği hangisi olsun: topu tıklayarak/dokunarak havada tutma (\"keepy-uppy\", skor=sektirme sayısı), raketle top sektirme (Pong/Breakout benzeri), yoksa topun duvarlardan kendiliğinden sektiği izlenimlik bir fizik demosu (DVD-logo tarzı, skor yok)?",
+      "why": "Bu, oyunun temel mekaniğini ve kapsamını belirler — sonraki tüm tasarım/mimari kararları buna dayanır.",
+      "criticality": "critical",
+      "suggested_options": [
+        "Tıkla/dokun ile topu havada tut (keepy-uppy)",
+        "Raketle sektir (Pong/Breakout)",
+        "Kendiliğinden seken top (DVD-logo demosu)"
+      ],
+      "answer": "Tıkla/dokun ile topu havada tut (keepy-uppy)",
+      "answered_at": "2026-07-31T01:37:15.578Z"
+    },
+    {
+      "id": "Q2",
+      "question": "Kontrol şekli: fare tıklama + boşluk tuşu + dokunma (hepsi birden) mi, yoksa yalnızca biri mi yeterli?",
+      "why": "Girdi yüzeyi UI/UX tasarımını ve mobil uyumluluk kapsamını etkiler.",
+      "criticality": "critical",
+      "suggested_options": [
+        "Hepsi (fare + klavye + dokunma)",
+        "Yalnızca fare/dokunma",
+        "Yalnızca klavye"
+      ],
+      "answer": "Hepsi (fare + klavye + dokunma)",
+      "answered_at": "2026-07-31T01:37:22.691Z"
+    },
+    {
+      "id": "Q3",
+      "question": "Top hızı zamanla artarak zorluk yükselsin mi, yoksa sabit hızda mı kalsın?",
+      "why": "Zorluk eğrisi oyun döngüsü ve test kapsamını etkiler.",
+      "criticality": "optional",
+      "suggested_options": [
+        "Zamanla hızlansın",
+        "Sabit hız"
+      ],
+      "answer": "Zamanla hızlansın",
+      "answered_at": "2026-07-31T01:37:25.935Z"
+    },
+    {
+      "id": "Q4",
+      "question": "En yüksek skor tarayıcıda (localStorage) hatırlansın mı?",
+      "why": "Kalıcılık kapsamını (stateless mi, basit client-side kalıcılık mı) netleştirir.",
+      "criticality": "optional",
+      "suggested_options": [
+        "Evet, localStorage'da tutulsun",
+        "Hayır, yalnız oturum içi"
+      ],
+      "answer": "Hayır, yalnız oturum içi",
+      "answered_at": "2026-07-31T01:37:33.658Z"
+    },
+    {
+      "id": "Q5",
+      "question": "Görsel tema: sade renkli/geometrik top mu, yoksa emoji/basit sprite mı tercih edilir?",
+      "why": "UI/UX (Faz 6) görsel yönünü belirler, işlevi etkilemez.",
+      "criticality": "optional",
+      "suggested_options": [
+        "Sade renkli/geometrik",
+        "Emoji/basit sprite"
+      ],
+      "answer": "Emoji/basit sprite",
+      "answered_at": "2026-07-31T01:37:45.249Z"
+    }
+  ],
+  "answered_at": "2026-07-31T01:37:45.249Z",
+  "applied_at": "2026-07-31T00:00:00.000Z"
+}
