@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 137,
+  "revision": 143,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 16,
-  "status": "completed",
+  "current_phase": 9,
+  "status": "running",
   "active_agents": [],
   "phases": {
     "0": {
@@ -110,41 +110,29 @@
       ]
     },
     "9": {
-      "status": "done",
+      "status": "running",
       "mode": "AUTOPILOT",
-      "started_at": "2026-07-31T02:11:37.335Z",
+      "started_at": "2026-07-31T03:50:06.945Z",
       "tasks": [
         {
-          "title": "TASK-001 physics.js core (createState/step/speedFor) - test+impl",
-          "status": "done"
+          "title": "REQ-001 bootstrap testi yaz (kirmizi) + tests/ commit",
+          "status": "in_progress"
         },
         {
-          "title": "TASK-002 physics.js tryHit + isGrounded - test+impl",
-          "status": "done"
+          "title": "boot() implement et (game.js) + src/public commit",
+          "status": "pending"
         },
         {
-          "title": "TASK-003 server.js Express static+/health+security headers - test+impl",
-          "status": "done"
+          "title": "npm test yesil",
+          "status": "pending"
         },
         {
-          "title": "TASK-004 public/index.html + style.css yuzeyi",
-          "status": "done"
+          "title": "DL yaz",
+          "status": "pending"
         },
         {
-          "title": "TASK-005 public/game.js rAF+render+HUD",
-          "status": "done"
-        },
-        {
-          "title": "TASK-006 public/game.js input (click/touch/Space) + hit()",
-          "status": "done"
-        },
-        {
-          "title": "TASK-007 oyun-bitti overlay + restart",
-          "status": "done"
-        },
-        {
-          "title": "TASK-008 npm test yesil + coverage + DL-09-001 + kapi dogrula",
-          "status": "done"
+          "title": "push",
+          "status": "pending"
         }
       ],
       "gate_passed": true,
@@ -273,111 +261,20 @@
       ]
     }
   },
-  "feedback_loops": [],
+  "feedback_loops": [
+    {
+      "from": "REQ-001",
+      "to": "9",
+      "reason": "game.js modülünde createGame() gerçek DOM elemanlarıyla hiç çağrılmıyor — canvas boş kalıyor, top hiç render edilmiyor/oyun hiç başlamıyor",
+      "at": "2026-07-31T03:50:06.000Z"
+    }
+  ],
   "pending_human_review": [],
   "history": [
     {
-      "at": "2026-07-31T01:39:20.678Z",
-      "event": "mode_changed",
-      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
-    },
-    {
-      "at": "2026-07-31T01:39:20.933Z",
-      "event": "profile_changed",
-      "detail": "LITE"
-    },
-    {
-      "at": "2026-07-31T01:42:33.200Z",
-      "event": "mode_changed",
-      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
-    },
-    {
-      "at": "2026-07-31T01:42:33.463Z",
-      "event": "profile_changed",
-      "detail": "LITE"
-    },
-    {
-      "at": "2026-07-31T01:50:25.071Z",
-      "event": "mode_changed",
-      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
-    },
-    {
-      "at": "2026-07-31T01:50:25.349Z",
-      "event": "profile_changed",
-      "detail": "LITE"
-    },
-    {
-      "event": "phase_closed",
-      "phase": 9,
-      "detail": "ORPHANED_RUN kurtarma: server.js -> src/server.js tasindi, test kirilganligi giderildi, DL-09-001 yazildi, kapi (all) gecti"
-    },
-    {
-      "event": "phase_skipped",
-      "phase": 10,
-      "detail": "LITE profilinde Code Review atlanir (AF-112, profiles.json skipped[\"10\"]) - kullanici karari 2026-07-26"
-    },
-    {
-      "event": "phase_started",
-      "phase": 11
-    },
-    {
-      "event": "phase_closed",
-      "phase": 11,
-      "detail": "Test plani + sonuc raporu: 25/25 yesil, coverage %98.6, NFR-3/4 statik incelendi"
-    },
-    {
-      "event": "phase_started",
-      "phase": 12
-    },
-    {
-      "event": "phase_closed",
-      "phase": 12,
-      "detail": "Dockerfile eklendi, container-ici dogrulandi (/health+/), DL-12-001"
-    },
-    {
-      "event": "phase_started",
-      "phase": 13
-    },
-    {
-      "event": "phase_closed",
-      "phase": 13,
-      "detail": "Release notes v0.1.0, rollback plani, DL-13-001"
-    },
-    {
-      "event": "phase_started",
-      "phase": 14
-    },
-    {
-      "event": "phase_closed",
-      "phase": 14,
-      "detail": "Health check + hata gorunurlugu tanimlandi, DL-14-001"
-    },
-    {
-      "event": "phase_started",
-      "phase": 15
-    },
-    {
-      "event": "phase_closed",
-      "phase": 15,
-      "detail": "6 TD kalemi (0 P1/1 P2/5 P3), npm audit CVE TD-1 olarak kaydedildi, DL-15-001"
-    },
-    {
-      "event": "phase_started",
-      "phase": 16
-    },
-    {
-      "at": "2026-07-31T02:47:43.150Z",
-      "event": "zombie_agents_pruned",
-      "detail": "1 bayat ajan kaydı budandı (fazı koşmuyor — AF-090)"
-    },
-    {
-      "event": "phase_closed",
-      "phase": 16,
-      "detail": "Retro: AF-127 (state-update.mjs coklu-bayrak sessiz yoksayma) kaydedildi, DL-16-001"
-    },
-    {
-      "event": "pipeline_completed",
-      "detail": "17 faz tamamlandi (LITE, Faz 10 AF-112 geregi atlandi). .pipeline-complete isareti eklendi, CI artik normal kosacak."
+      "at": "2026-07-31T03:50:06.000Z",
+      "event": "cycle_opened",
+      "detail": "REQ-001: top render edilmiyor/oyun başlamıyor (bootstrap eksik) — Faz 9 yeniden açıldı"
     }
   ],
   "budget": {
@@ -498,7 +395,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T02:47:43.477Z",
+  "updated_at": "2026-07-31T03:53:59.354Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -608,5 +505,35 @@
       "run": "docker run -p 3000:3000 ball-bounce"
     },
     "links": []
-  }
+  },
+  "deploy": {
+    "status": "deployed",
+    "url": "https://ball-bounce.apps.sametemek.com",
+    "server": "main",
+    "triggered_at": "2026-07-31T02:47:52Z",
+    "deployed_at": "2026-07-31T02:49:02Z",
+    "sha": "81b4237037fc",
+    "image": "ghcr.io/auto-forge-projects/ball-bounce:81b4237037fc",
+    "history": [
+      {
+        "sha": "81b4237037fc",
+        "at": "2026-07-31T02:49:02Z",
+        "url": "https://ball-bounce.apps.sametemek.com"
+      }
+    ]
+  },
+  "cycle": 2,
+  "requests": [
+    {
+      "id": "REQ-001",
+      "text": "Oyunda sektirilecek top yok",
+      "at": "2026-07-31T03:50:06.000Z",
+      "status": "in_delta",
+      "phases": [
+        "9"
+      ],
+      "cycle": 2,
+      "notify_email": "sametemek@windowslive.com"
+    }
+  ]
 }
