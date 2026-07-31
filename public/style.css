@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --fg: #1c2333;
+  --accent: #2a63f6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  touch-action: none; /* mobil: kaydırma/gecikme olmadan dokunma */
+}
+
+h1 {
+  margin: 4px 0;
+  font-size: 1.4rem;
+}
+
+#score {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+canvas#game {
+  max-width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  touch-action: none;
+}
+
+#game-over {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(15, 18, 28, 0.72);
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+#game-over[hidden] { display: none; }
+
+#restart {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+#restart:hover { filter: brightness(1.1); }

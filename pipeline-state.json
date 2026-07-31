@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 64,
+  "revision": 68,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -13,7 +13,7 @@
       "phase": 9,
       "task": "Development (TDD)",
       "started_at": "2026-07-31T02:11:37.335Z",
-      "last_update": "2026-07-31T02:13:45.914Z",
+      "last_update": "2026-07-31T02:18:55.017Z",
       "via": "inline"
     }
   ],
@@ -138,11 +138,11 @@
         },
         {
           "title": "TASK-004 public/index.html + style.css yuzeyi",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "TASK-005 public/game.js rAF+render+HUD",
-          "status": "pending"
+          "status": "in_progress"
         },
         {
           "title": "TASK-006 public/game.js input (click/touch/Space) + hit()",
@@ -269,7 +269,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T02:18:22.350Z",
+  "updated_at": "2026-07-31T02:19:08.215Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
