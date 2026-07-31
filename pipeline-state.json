@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 114,
+  "revision": 121,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 14,
+  "current_phase": 15,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -219,6 +219,19 @@
       ],
       "completed_at": "2026-07-31T02:43:07.318Z"
     },
+    "14": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:43:30.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/14-monitoring.md"
+      ],
+      "decisions": [
+        "DL-14-001"
+      ],
+      "completed_at": "2026-07-31T02:44:21.592Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -303,6 +316,15 @@
       "event": "phase_closed",
       "phase": 13,
       "detail": "Release notes v0.1.0, rollback plani, DL-13-001"
+    },
+    {
+      "event": "phase_started",
+      "phase": 14
+    },
+    {
+      "event": "phase_closed",
+      "phase": 14,
+      "detail": "Health check + hata gorunurlugu tanimlandi, DL-14-001"
     }
   ],
   "budget": {
@@ -396,10 +418,18 @@
         "model_recommended": "haiku",
         "gate_passed": true,
         "at": "2026-07-31T02:43:07.318Z"
+      },
+      {
+        "phase": "14",
+        "duration_s": 52,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T02:44:21.592Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:43:10.447Z",
+  "updated_at": "2026-07-31T02:44:21.982Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -481,6 +511,11 @@
       "phase": 13,
       "at": "2026-07-31T02:43:07.474Z",
       "note": "v0.1.0 release notes yazildi, rollback plani (imaj geri alma, durumsuz mimari sayesinde veri kaybi yok). Sonraki fazlar bu surumu referans alacak."
+    },
+    {
+      "phase": 14,
+      "at": "2026-07-31T02:44:21.914Z",
+      "note": "Izleme: /health + docker logs + dashboard Urun paneli. Alerting yok (LITE, DL-14-001) - uptime-check ihtiyaci Faz15 borcuna."
     }
   ],
   "product": {
