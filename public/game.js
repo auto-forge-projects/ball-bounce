@@ -64,3 +64,23 @@ export function createGame({ canvas, scoreEl, gameOverEl, finalScoreEl, restartB
 
   return { getState: () => state, hit, reset };
 }
+
+// REQ-001: gerçek DOM elemanlarını id'leriyle bağlayıp createGame()'i başlatır. Modül yüklenip
+// tanımlanmak (`export function createGame`) oyunu ÇALIŞTIRMAZ — bootstrap eksikti, top hiç
+// render edilmiyordu (docs/00-idea-v2.md).
+export function boot(doc, win) {
+  return createGame({
+    canvas: doc.getElementById('game'),
+    scoreEl: doc.getElementById('score'),
+    gameOverEl: doc.getElementById('game-over'),
+    finalScoreEl: doc.getElementById('final-score'),
+    restartBtn: doc.getElementById('restart'),
+    win,
+    now: () => win.performance.now(),
+  });
+}
+
+/* c8 ignore next 3 */
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  boot(document, window);
+}

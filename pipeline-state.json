@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 143,
+  "revision": 146,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -116,19 +116,19 @@
       "tasks": [
         {
           "title": "REQ-001 bootstrap testi yaz (kirmizi) + tests/ commit",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "boot() implement et (game.js) + src/public commit",
-          "status": "pending"
+          "status": "done"
         },
         {
           "title": "npm test yesil",
-          "status": "pending"
+          "status": "done"
         },
         {
           "title": "DL yaz",
-          "status": "pending"
+          "status": "in_progress"
         },
         {
           "title": "push",
@@ -395,7 +395,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T03:53:59.354Z",
+  "updated_at": "2026-07-31T03:54:24.661Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
