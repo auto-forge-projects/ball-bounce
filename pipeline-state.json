@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 80,
+  "revision": 89,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 10,
+  "current_phase": 12,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -158,6 +158,38 @@
         "tests/"
       ]
     },
+    "11": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:36:00.000Z",
+      "tasks": [
+        {
+          "title": "TASK-1 FR/NFR -> test esleme (test-plan.md)",
+          "status": "done"
+        },
+        {
+          "title": "TASK-2 npm test + coverage calistir (results.md)",
+          "status": "done"
+        },
+        {
+          "title": "TASK-3 NFR-3/NFR-4 statik kod incelemesi",
+          "status": "done"
+        },
+        {
+          "title": "TASK-4 DL-11-001 + kapi dogrula + commit",
+          "status": "done"
+        }
+      ],
+      "gate_passed": true,
+      "artifacts": [
+        "docs/11-test/test-plan.md",
+        "docs/11-test/results.md"
+      ],
+      "decisions": [
+        "DL-11-001"
+      ],
+      "completed_at": "2026-07-31T02:37:29.876Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -274,10 +306,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T02:33:00.000Z"
+      },
+      {
+        "phase": "11",
+        "duration_s": 90,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T02:37:29.876Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:33:41.783Z",
+  "updated_at": "2026-07-31T02:37:29.877Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
