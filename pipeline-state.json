@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 97,
+  "revision": 113,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 13,
+  "current_phase": 14,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -206,6 +206,19 @@
       ],
       "completed_at": "2026-07-31T02:40:08.119Z"
     },
+    "13": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:42:00.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/13-release-notes.md"
+      ],
+      "decisions": [
+        "DL-13-001"
+      ],
+      "completed_at": "2026-07-31T02:43:07.318Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -253,6 +266,43 @@
       "at": "2026-07-31T01:50:25.349Z",
       "event": "profile_changed",
       "detail": "LITE"
+    },
+    {
+      "event": "phase_closed",
+      "phase": 9,
+      "detail": "ORPHANED_RUN kurtarma: server.js -> src/server.js tasindi, test kirilganligi giderildi, DL-09-001 yazildi, kapi (all) gecti"
+    },
+    {
+      "event": "phase_skipped",
+      "phase": 10,
+      "detail": "LITE profilinde Code Review atlanir (AF-112, profiles.json skipped[\"10\"]) - kullanici karari 2026-07-26"
+    },
+    {
+      "event": "phase_started",
+      "phase": 11
+    },
+    {
+      "event": "phase_closed",
+      "phase": 11,
+      "detail": "Test plani + sonuc raporu: 25/25 yesil, coverage %98.6, NFR-3/4 statik incelendi"
+    },
+    {
+      "event": "phase_started",
+      "phase": 12
+    },
+    {
+      "event": "phase_closed",
+      "phase": 12,
+      "detail": "Dockerfile eklendi, container-ici dogrulandi (/health+/), DL-12-001"
+    },
+    {
+      "event": "phase_started",
+      "phase": 13
+    },
+    {
+      "event": "phase_closed",
+      "phase": 13,
+      "detail": "Release notes v0.1.0, rollback plani, DL-13-001"
     }
   ],
   "budget": {
@@ -338,10 +388,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T02:40:08.119Z"
+      },
+      {
+        "phase": "13",
+        "duration_s": 67,
+        "model": null,
+        "model_recommended": "haiku",
+        "gate_passed": true,
+        "at": "2026-07-31T02:43:07.318Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:40:16.941Z",
+  "updated_at": "2026-07-31T02:43:07.550Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -403,6 +461,26 @@
       "phase": 8,
       "at": "2026-07-31T02:10:34.060Z",
       "note": "Plan: TASK-001..009, TDD sirali (physics.js cekirdek once). Faz 9 bu backlogu takip edecek, her task test+impl commit ciftiyle."
+    },
+    {
+      "phase": 9,
+      "at": "2026-07-31T02:41:19.470Z",
+      "note": "Kod tamam: public/physics.js (saf fizik) + public/game.js (I/O) + src/server.js (Express static+/health). TDD commit ciftleri + 25/25 test yesil + coverage %98.6. server.js artik src/ altinda (emsal proje yapisiyla hizali)."
+    },
+    {
+      "phase": 11,
+      "at": "2026-07-31T02:41:27.130Z",
+      "note": "Tum kritik senaryolar (FR-1..6, NFR-1..4) mevcut Faz 9 birim+entegrasyon testleriyle kapsandi, ayri E2E katmani gerekmedi (DL-11-001). 25/25 yesil, coverage %98.6."
+    },
+    {
+      "phase": 12,
+      "at": "2026-07-31T02:41:27.446Z",
+      "note": "Dockerfile hazir (node:22-alpine, src/server.js CMD), build+container-ici /health+/ dogrulandi. Host-port bind sandboxta reddedildi (DL-12-001). deploy.json zaten enabled:true, host_port:5007."
+    },
+    {
+      "phase": 13,
+      "at": "2026-07-31T02:43:07.474Z",
+      "note": "v0.1.0 release notes yazildi, rollback plani (imaj geri alma, durumsuz mimari sayesinde veri kaybi yok). Sonraki fazlar bu surumu referans alacak."
     }
   ],
   "product": {
