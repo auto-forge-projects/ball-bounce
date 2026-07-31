@@ -1,13 +1,14 @@
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { createServer } from '../server.js';
+import { createServer } from '../src/server.js';
 
 let server;
 let base;
 
 before(async () => {
-  server = createServer();
-  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  await new Promise((resolve) => {
+    server = createServer().listen(0, '127.0.0.1', resolve);
+  });
   const { port } = server.address();
   base = `http://127.0.0.1:${port}`;
 });

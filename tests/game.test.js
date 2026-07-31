@@ -40,8 +40,10 @@ test('keydown Space: hit() tetikler (klavye kontrolü, FR-6)', () => {
 });
 
 test('rAF döngüsü: her tick skor HUD metnini günceller', () => {
-  const { win, scoreEl, game } = setup();
-  game.hit(240, 180); // playing'e geçir + skor 1
+  const { win, scoreEl, game, advanceTime } = setup();
+  game.hit(240, 180); // ready -> playing (ilk girdi yalnız başlatır, skor 0 kalır)
+  advanceTime(130); // cooldown (120ms) geçsin
+  game.hit(240, 180); // playing + erişim mesafesinde -> skor 1
   win.__tick(16);
   assert.equal(scoreEl.textContent, 'Skor: 1');
 });
