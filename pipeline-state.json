@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 27,
+  "revision": 31,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 3,
+  "current_phase": 4,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -35,6 +35,21 @@
       ],
       "decisions": [
         "DL-03-001"
+      ]
+    },
+    "4": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T01:56:26.995Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-31T01:59:28.621Z",
+      "note": "Cozum Analizi tamamlandi (architect subagent) - Vanilla Canvas 2D + Express secildi",
+      "artifacts": [
+        "docs/04-solution-analysis.md"
+      ],
+      "decisions": [
+        "DL-04-001",
+        "DL-04-002"
       ]
     },
     "1-2": {
@@ -105,10 +120,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T01:56:09.175Z"
+      },
+      {
+        "phase": "4",
+        "duration_s": 182,
+        "model": null,
+        "model_recommended": "opus",
+        "gate_passed": true,
+        "at": "2026-07-31T01:59:28.621Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T01:56:09.258Z",
+  "updated_at": "2026-07-31T01:59:28.698Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -140,6 +163,11 @@
       "phase": "1-2",
       "at": "2026-07-31T01:55:06.604Z",
       "note": "GO karari verildi; 3 KPI: yukleme<=5sn, skor guncelleme<=1sn, oyun-bitti ekrani<=1sn. Faz 3 bu KPI listesinden FR/NFR turetecek."
+    },
+    {
+      "phase": 3,
+      "at": "2026-07-31T01:56:14.906Z",
+      "note": "6 FR (vurus/skor/oyun-bitti/restart/hiz-artisi/kontrol) + 4 NFR (gecikme<=1sn x2, framework yok, skor kaliciligi yok). Faz 4/5 canvas tabanli client-side mimari ustune kurulacak."
     }
   ]
 }
