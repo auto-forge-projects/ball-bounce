@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 44,
+  "revision": 48,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 7,
+  "current_phase": 8,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -93,6 +93,20 @@
       ],
       "decisions": [
         "DL-07-001"
+      ]
+    },
+    "8": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:09:44.364Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-31T02:10:31.969Z",
+      "note": "Planlama tamamlandi (business-analyst rolu, inline) - 9 task, TDD sirali",
+      "artifacts": [
+        "docs/08-plan.md"
+      ],
+      "decisions": [
+        "DL-08-001"
       ]
     },
     "1-2": {
@@ -195,10 +209,18 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-31T02:09:25.963Z"
+      },
+      {
+        "phase": "8",
+        "duration_s": 48,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T02:10:31.969Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:09:26.028Z",
+  "updated_at": "2026-07-31T02:10:32.037Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -250,6 +272,11 @@
       "phase": 6,
       "at": "2026-07-31T02:05:54.320Z",
       "note": "UI: canvas#game + skor HUD + game-over overlay. Tum girdi (click/touch/space) tek hit() fonksiyonuna gider. Urun tipi web olarak ayarlandi."
+    },
+    {
+      "phase": 7,
+      "at": "2026-07-31T02:09:28.124Z",
+      "note": "Guvenlik: CSP/nosniff/HSTS headerlari, statik servis path-traversal koruma, express sabit surum, DOM-XSS yasagi (innerHTML/eval yok). SEC-1..14 Faz 9da uygulanacak."
     }
   ],
   "product": {
