@@ -1,6 +1,10 @@
-# ball-bounce v0.1.0 — Release Notes
+# ball-bounce v0.1.1 — Release Notes
 
-- Tarih: 2026-07-31 | SemVer: **v0.1.0** (0.x = API garanti yok) | Mod: AUTOPILOT
+- Tarih: 2026-07-31 | SemVer: **v0.1.1** (0.x = API garanti yok) | Mod: AUTOPILOT
+
+## Değişiklikler (REQ-001, patch)
+- **Düzeltme:** Top hiç render edilmiyordu / oyun hiç başlamıyordu — `public/game.js` modülü yüklendiğinde `createGame(...)` gerçek DOM elemanlarıyla hiç çağrılmıyordu (bootstrap eksikti). `boot(doc, win)` eklendi; tarayıcıda modül yüklenince otomatik çalışır (DL-09-002). Davranış değişikliği yok — FR-1..FR-6 aynı, yalnız fiilen ÇALIŞIYOR.
+- Regresyon testi: `tests/game.boot.test.js` (bootstrap→render). Toplam test 25→26, coverage 98.37/93.04/93.75.
 
 ## Öne çıkanlar
 İlk sürüm (M1, Faz 8 planı) — kimlik/oturum gerektirmeyen, tek oyunculu keepy-uppy (top sektirme) tarayıcı oyunu. Tek Docker imajı, sunucu tarafında oyun mantığı/kalıcı veri yok.
@@ -20,8 +24,8 @@ Gerçek tarayıcı/cihaz matrisi ve host-port-publish edilmiş Docker doğrulama
 
 ## Kurulum
 ```
-docker build -t ball-bounce:0.1.0 .
-docker run -d --rm -p 3000:3000 --name ball-bounce ball-bounce:0.1.0
+docker build -t ball-bounce:0.1.1 .
+docker run -d --rm -p 3000:3000 --name ball-bounce ball-bounce:0.1.1
 curl http://localhost:3000/health
 ```
 Uzak dağıtım: `deploy.json` (nginx proxy, `host_port:5007`, wildcard TLS) → `https://ball-bounce.apps.sametemek.com`.
@@ -34,4 +38,4 @@ Uzak dağıtım: `deploy.json` (nginx proxy, `host_port:5007`, wildcard TLS) →
 
 ## Kalite kapısı raporu
 - "Rollback prosedürü tanımlı" → ✅
-- "Sürüm plana uygun" → ✅ (Faz 8 M1 milestone: v0.1.0, FR-1..FR-6 kapsandı)
+- "Sürüm plana uygun" → ✅ (Faz 8 M1 milestone: v0.1.0 taban + REQ-001 patch → v0.1.1, FR-1..FR-6 kapsandı ve fiilen çalışıyor)

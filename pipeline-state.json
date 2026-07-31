@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 154,
+  "revision": 162,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 9,
-  "status": "running",
+  "current_phase": 16,
+  "status": "completed",
   "active_agents": [],
   "phases": {
     "0": {
@@ -203,15 +203,16 @@
     "13": {
       "status": "done",
       "mode": "AUTOPILOT",
-      "started_at": "2026-07-31T02:42:00.000Z",
+      "started_at": "2026-07-31T04:01:54.686Z",
       "gate_passed": true,
       "artifacts": [
         "docs/13-release-notes.md"
       ],
       "decisions": [
-        "DL-13-001"
+        "DL-13-001",
+        "DL-13-002"
       ],
-      "completed_at": "2026-07-31T02:43:07.318Z"
+      "completed_at": "2026-07-31T04:08:00.000Z"
     },
     "14": {
       "status": "done",
@@ -281,6 +282,24 @@
       "at": "2026-07-31T03:50:06.000Z",
       "event": "cycle_opened",
       "detail": "REQ-001: top render edilmiyor/oyun başlamıyor (bootstrap eksik) — Faz 9 yeniden açıldı"
+    },
+    {
+      "at": "2026-07-31T04:00:00.000Z",
+      "event": "phase_revalidation_started",
+      "phase": 11,
+      "detail": "AF-091: Faz 9 REQ-001 delta sonrasi gecersiz sayildi, yeniden dogrulaniyor"
+    },
+    {
+      "at": "2026-07-31T04:02:00.000Z",
+      "event": "phase_revalidated",
+      "phase": 11,
+      "detail": "AF-091: REQ-001 delta sonrasi yeniden dogrulandi, bootstrap senaryosu eklendi"
+    },
+    {
+      "at": "2026-07-31T04:04:00.000Z",
+      "event": "phase_revalidated",
+      "phase": 12,
+      "detail": "AF-091: REQ-001 sonrasi revalidasyon - degisiklik gerekmedi (Dockerfile/CI zaten genel)"
     }
   ],
   "budget": {
@@ -414,10 +433,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T04:02:00.000Z"
+      },
+      {
+        "phase": "13",
+        "duration_s": 365,
+        "model": null,
+        "model_recommended": "haiku",
+        "gate_passed": true,
+        "at": "2026-07-31T04:08:00.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T04:01:46.775Z",
+  "updated_at": "2026-07-31T04:05:05.597Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -514,12 +541,22 @@
       "phase": 16,
       "at": "2026-07-31T02:47:43.410Z",
       "note": "Pipeline tamamlandi. En onemli fabrika ogrenimi: AF-127 (state-update.mjs coklu mutasyon bayragi sessizce ilkine indirgeniyor). TD-1 (npm audit CVE) sonraki bakim turunda ele alinmali."
+    },
+    {
+      "phase": 11,
+      "at": "2026-07-31T04:04:31.476Z",
+      "note": "REQ-001 sonrasi test-plan/results.md guncellendi (26/26, bootstrap senaryosu eklendi). Faz 12/13 bu haliyle devam eder."
+    },
+    {
+      "phase": 12,
+      "at": "2026-07-31T04:04:37.579Z",
+      "note": "REQ-001 revalidasyonu: Dockerfile/CI degismedi (public/ zaten tumden kopyalaniyor, npm test genel). Faz 13 devam eder."
     }
   ],
   "product": {
     "name": "ball-bounce",
     "type": "web",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "auto_run": false,
     "commands": {
       "build": "docker build -t ball-bounce .",
@@ -550,12 +587,16 @@
       "id": "REQ-001",
       "text": "Oyunda sektirilecek top yok",
       "at": "2026-07-31T03:50:06.000Z",
-      "status": "in_delta",
+      "status": "shipped",
       "phases": [
-        "9"
+        "9",
+        "11",
+        "12",
+        "13"
       ],
       "cycle": 2,
-      "notify_email": "sametemek@windowslive.com"
+      "notify_email": "sametemek@windowslive.com",
+      "shipped_in": "v0.1.1"
     }
   ]
 }
