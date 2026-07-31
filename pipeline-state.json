@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 69,
+  "revision": 72,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -13,7 +13,7 @@
       "phase": 9,
       "task": "Development (TDD)",
       "started_at": "2026-07-31T02:11:37.335Z",
-      "last_update": "2026-07-31T02:19:08.379Z",
+      "last_update": "2026-07-31T02:19:10.254Z",
       "via": "inline"
     }
   ],
@@ -142,11 +142,11 @@
         },
         {
           "title": "TASK-005 public/game.js rAF+render+HUD",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "TASK-006 public/game.js input (click/touch/Space) + hit()",
-          "status": "pending"
+          "status": "in_progress"
         },
         {
           "title": "TASK-007 oyun-bitti overlay + restart",
@@ -269,7 +269,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T02:19:08.379Z",
+  "updated_at": "2026-07-31T02:19:43.564Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
