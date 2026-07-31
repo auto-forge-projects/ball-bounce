@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 89,
+  "revision": 96,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 12,
+  "current_phase": 13,
   "status": "pending",
   "active_agents": [],
   "phases": {
@@ -190,6 +190,22 @@
       ],
       "completed_at": "2026-07-31T02:37:29.876Z"
     },
+    "12": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:38:00.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "Dockerfile",
+        "docs/12-cicd.md",
+        ".github/workflows/ci.yml",
+        ".github/workflows/deploy-image.yml"
+      ],
+      "decisions": [
+        "DL-12-001"
+      ],
+      "completed_at": "2026-07-31T02:40:08.119Z"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -314,10 +330,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-31T02:37:29.876Z"
+      },
+      {
+        "phase": "12",
+        "duration_s": 128,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-31T02:40:08.119Z"
       }
     ]
   },
-  "updated_at": "2026-07-31T02:37:29.877Z",
+  "updated_at": "2026-07-31T02:40:08.120Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
