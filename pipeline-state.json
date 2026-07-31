@@ -1,12 +1,22 @@
 {
   "schema_version": 2,
-  "revision": 48,
+  "revision": 54,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
-  "current_phase": 8,
+  "current_phase": 9,
   "status": "pending",
-  "active_agents": [],
+  "active_agents": [
+    {
+      "agent": "developer",
+      "model": "sonnet",
+      "phase": 9,
+      "task": "Development (TDD)",
+      "started_at": "2026-07-31T02:11:37.335Z",
+      "last_update": "2026-07-31T02:11:40.957Z",
+      "via": "inline"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -107,6 +117,45 @@
       ],
       "decisions": [
         "DL-08-001"
+      ]
+    },
+    "9": {
+      "status": "running",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-31T02:11:37.335Z",
+      "tasks": [
+        {
+          "title": "TASK-001 physics.js core (createState/step/speedFor) - test+impl",
+          "status": "done"
+        },
+        {
+          "title": "TASK-002 physics.js tryHit + isGrounded - test+impl",
+          "status": "in_progress"
+        },
+        {
+          "title": "TASK-003 server.js Express static+/health+security headers - test+impl",
+          "status": "pending"
+        },
+        {
+          "title": "TASK-004 public/index.html + style.css yuzeyi",
+          "status": "pending"
+        },
+        {
+          "title": "TASK-005 public/game.js rAF+render+HUD",
+          "status": "pending"
+        },
+        {
+          "title": "TASK-006 public/game.js input (click/touch/Space) + hit()",
+          "status": "pending"
+        },
+        {
+          "title": "TASK-007 oyun-bitti overlay + restart",
+          "status": "pending"
+        },
+        {
+          "title": "TASK-008 npm test yesil + coverage + DL-09-001 + kapi dogrula",
+          "status": "pending"
+        }
       ]
     },
     "1-2": {
@@ -220,7 +269,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T02:10:32.037Z",
+  "updated_at": "2026-07-31T02:12:16.024Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
@@ -277,6 +326,11 @@
       "phase": 7,
       "at": "2026-07-31T02:09:28.124Z",
       "note": "Guvenlik: CSP/nosniff/HSTS headerlari, statik servis path-traversal koruma, express sabit surum, DOM-XSS yasagi (innerHTML/eval yok). SEC-1..14 Faz 9da uygulanacak."
+    },
+    {
+      "phase": 8,
+      "at": "2026-07-31T02:10:34.060Z",
+      "note": "Plan: TASK-001..009, TDD sirali (physics.js cekirdek once). Faz 9 bu backlogu takip edecek, her task test+impl commit ciftiyle."
     }
   ],
   "product": {
