@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 153,
+  "revision": 154,
   "project": "ball-bounce",
   "workspace": "workspace/ball-bounce",
   "profile": "LITE",
@@ -417,7 +417,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-31T04:01:44.762Z",
+  "updated_at": "2026-07-31T04:01:46.775Z",
   "default_mode": "AUTOPILOT",
   "providers": {
     "selected": [
